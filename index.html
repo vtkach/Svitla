@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Email</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="build/main.css">
+        <script src="vendors/jquery.js"></script>
+        <script src="vendors/underscore.js"></script>
+        <script src="vendors/backbone.js"></script>
+        <script src="vendors/backbone.modelbinder.js"></script>
+        <script src="assets/js/init-application.js"></script>
+        <script src="assets/js/views/Map.js"></script>
+        <script src="build/jst.js"></script>
+        <script src="assets/js/models/Email.js"></script>
+        <script src="assets/js/collections/EmailList.js"></script>
+        <script src="assets/js/views/DetailedInfo.js"></script>
+        <script src="assets/js/views/Email.js"></script>
+        <script src="assets/js/views/EmailList.js"></script>
+        <script src="assets/js/routers/Router.js"></script>
+        <script src="run.js"></script>
+    </head>
+    <body>
+        <section class="container">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th class="detailed-info">Username</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th class="detailed-info">Phone</th>
+                        <th class="detailed-info">Website</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <footer class="controls">
+                <button class="btn btn-primary save">Save</button>
+                <button class="btn btn-default cancel">Cancel</button>
+            </footer>
+            <div id="map"></div>
+        </section>
+        <script>
+            function initMap () {
+
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS_2VxtO7Ljhl7NNausR7icExI90hTRtU&callback=initMap"></script>
+    </body>
+</html>

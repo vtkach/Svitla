@@ -1,0 +1,2 @@
+this["app"]["jst"]["detailedinfo"] = function(obj) {obj || (obj = {});var __t, __p = '';with (obj) {__p += '<td class="name"></td>\n<td class="username"></td>\n<td contenteditable class="email"></td>\n<td class="address"></td>\n<td class="phone"></td>\n<td contenteditable class="website"></td>';}return __p};
+this["app"]["jst"]["email"] = function(obj) {obj || (obj = {});var __t, __p = '';with (obj) {__p += '<td><a href="#" class="name"></a></td>\n<td class="email"></td>\n<td class="address-city"></td>';}return __p};

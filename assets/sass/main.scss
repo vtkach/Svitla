@@ -1,0 +1,33 @@
+// for google maps
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	height: 300px;
+	width: 300px;
+}
+
+.controls {
+	justify-content: flex-end;
+	display: flex;
+}
+
+th, td {
+	text-align: center;
+}
+
+.table td[class] {
+	vertical-align: middle;
+}
+td[contenteditable] {
+	outline: 1px dashed #aaa;
+	&:hover {
+		background-color: #337ab7;
+		cursor: pointer;
+		color: #fff;
+	}
+}
+
