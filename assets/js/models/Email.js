@@ -14,9 +14,9 @@
 			};
 		},
 
-		urlRoot: function (id) {
+		/*urlRoot: function (id) {
 			return 'https://jsonplaceholder.typicode.com/users/' + id;
-		},
+		},*/
 
 		validate: function (attrs) {
 			if (attrs.email) {

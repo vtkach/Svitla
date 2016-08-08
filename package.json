@@ -13,6 +13,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.3.2",
     "gulp-template-compile": "^1.2.2",
-    "gulp-tojst": "^0.1.2"
+    "gulp-tojst": "^0.1.2",
+    "gulp-uglify": "^2.0.0"
   }
 }

@@ -4,11 +4,11 @@
 
         template: app.jst['detailedinfo'],
 
-        tagName: 'tr',
-
         events: {
             'input td': 'setNewData'
         },
+
+        tagName: 'tr',
 
         setNewData: function (event) {
             var target = event.target;

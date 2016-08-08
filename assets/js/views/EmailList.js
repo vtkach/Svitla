@@ -2,16 +2,33 @@
 
 	app.views.EmailListView = Backbone.View.extend({
 
+		savedCollection: null,
+
+		changedModel: null,
+
 		el: 'body',
 
-		savedCollection: null,
+		events: {
+			'click .save': 'saveData'
+		},
 
 		initialize: function () {
 			this.collection = new app.collections.EmailCollection();
 			this.cacheElements();
-			this.listenToOnce(this.collection, 'reset', this.saveCollection)
+			this.listenTo(this.collection, 'change', this.onModelChange)
+				.listenToOnce(this.collection, 'reset', this.saveCollection)
 				.listenTo(Backbone, 'show-address-by-coords', this.showMap)
 				.listenTo(this.collection, 'reset', this.onReset);
+		},
+
+		onModelChange: function (model) {
+			this.changedModel = model;
+		},
+
+		saveData: function () {
+			if (this.changedModel) {
+				this.changedModel.save(this.changedModel.changed);
+			}
 		},
 
 		saveCollection: function () {
@@ -23,7 +40,7 @@
 		},
 
 		cacheElements: function () {
-			this.$detailedInfo = this.$('.detailed-info, #map');
+			this.$detailedInfo = this.$('.detailed-info, #map, .controls');
 			this.$tbody = this.$('tbody');
 		},
 
