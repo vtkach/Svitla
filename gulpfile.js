@@ -39,6 +39,7 @@ gulp.task('sass:watch', function () {
 gulp.task('build-js', function () {
 	return gulp.src([
 		'vendors/jquery.js',
+		'vendors/tooltip.js',
 		"vendors/underscore.js",
 		"vendors/backbone.js",
 		"vendors/backbone.modelbinder.js",

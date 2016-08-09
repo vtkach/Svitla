@@ -24,10 +24,12 @@ th, td {
 }
 td[contenteditable] {
 	outline: 1px dashed #aaa;
+	&.error {
+	    outline: 1px dashed #f00;
+	}
 	&:hover {
 		background-color: #337ab7;
 		cursor: pointer;
 		color: #fff;
 	}
 }
-

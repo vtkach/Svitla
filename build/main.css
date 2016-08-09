@@ -19,6 +19,8 @@ th, td {
 
 td[contenteditable] {
   outline: 1px dashed #aaa; }
+  td[contenteditable].error {
+    outline: 1px dashed #f00; }
   td[contenteditable]:hover {
     background-color: #337ab7;
     cursor: pointer;

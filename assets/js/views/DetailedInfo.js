@@ -13,11 +13,24 @@
         setNewData: function (event) {
             var target = event.target;
 
-            this.model.set(target.className, target.value, { validate: true });
+            this.model.set(target.className, target.textContent, { validate: true });
         },
 
         initialize: function () {
             this._modelBinder = new Backbone.ModelBinder();
+            this.listenTo(this.model, 'invalid', this.showError);
+        },
+
+        setTooltips: function (error, index) {
+            this.$('.' + index).addClass('error').tooltip({
+                placement: 'bottom',
+                title: error
+            });
+        },
+
+        showError: function (model, error) {
+            this.$('.email, .website').removeClass('error');
+            _.each(error, this.setTooltips, this);
         },
 
         render: function () {
